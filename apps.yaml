@@ -1,0 +1,16 @@
+root: apps
+name: ingress-nginx
+version: nginx-0.10.2
+source:
+  url: https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.10.2/deploy/
+  manifests:
+    namespace.yaml
+    configmap.yaml
+    default-backend.yaml
+fork:
+  url: https://raw.githubusercontent.com/seizadi/ingress-nginx/master/deploy/
+  manifests:
+    without-rbac.yaml
+dest-dir:
+  output
+
