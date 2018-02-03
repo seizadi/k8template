@@ -1,4 +1,4 @@
-apps/output
+apps/ingress-nginx/output
 
 #mvn
 target
