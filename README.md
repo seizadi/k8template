@@ -2,8 +2,21 @@
 
 Notes on requirements
 
-- There are use cases where a more complex template solution might augment
-what we are trying to do here. One use case is where we use a standard
+There are use cases where a more complex template solution like 
+[K8 Charts](https://github.com/kubernetes/helm/blob/master/docs/charts.md)
+might augment what we are trying to do here.
+
+Here are will look at following paths, from something custom and the other side using all
+standard K8 tooling:
+   - Doing something custom
+   - Doing something custom but using charts and its pattern maybe
+   even using helm with --dry-run and --debug flags for rendering Helm templates 
+   into Kubernetes manifests. Then run the manifests.
+   - Helm with customization only in 
+     [Helm plugin](https://github.com/kubernetes/helm/blob/master/docs/plugins.md) 
+     Using Charts for deployment specification and Tiller for K8 orchestration
+
+One use case is where we use a standard
 solution like NGINX Ingress Controller but just want to customize it.
 
 Here is a case where you might have some internal yaml that was copied from
